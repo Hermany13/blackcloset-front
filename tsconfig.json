@@ -19,5 +19,6 @@
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "pages/_document.js", "pages/_document.jsx"],
+  "files": ["./styles/styled.d.ts", "./@types/images.d.ts"]
 }
