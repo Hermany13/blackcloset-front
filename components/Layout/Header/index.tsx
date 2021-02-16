@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 // Components
 import Navigation from './Navigation';
 import UserNavigation from './UserNavigation';
+import Image from '../../Image';
 
 // Styled Components
 import * as S from './styles';
@@ -21,8 +21,6 @@ const DesktopHeader: React.FC = () => {
             <Image
               src={LogoImage}
               alt="Logo Black Closet"
-              width={276}
-              height={148}
             />
           </a>
         </Link>

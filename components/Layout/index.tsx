@@ -5,6 +5,7 @@ import * as S from './styles';
 
 // Dynamic components
 const DesktopHeader = dynamic(() => import('../../components/Layout/Header'));
+const Footer = dynamic(() => import('../../components/Layout/Footer'));
 
 const Layout: React.FC = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -25,6 +26,7 @@ const Layout: React.FC = ({ children }) => {
 
       <S.Content>{children}</S.Content>
 
+      <Footer />
     </>
   );
 };

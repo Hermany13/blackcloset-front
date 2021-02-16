@@ -9,6 +9,7 @@
         "preprocess": false
       }
     ],
-    "styled-jsx/babel"
+    "styled-jsx/babel",
+    "inline-react-svg"
   ]
 }

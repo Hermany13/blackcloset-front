@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.div`
   width: 100%;
@@ -13,6 +14,10 @@ export const Container = styled.div`
     font-size: 36px;
     font-weight: bold;
     color: ${(props) => props.theme.colors.primary};
+
+    ${media.lessThan('medium')`
+      width: ${(props) => props.theme.sizes.baseWidthMobile};
+    `}
 
     span {
       margin-top: 20px;

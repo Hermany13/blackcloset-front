@@ -1,18 +1,18 @@
 import React from 'react';
-import Image from 'next/image';
 
 // Styled components
 import * as S from './styles';
 
 // Images
 import GhostImage from '../../assets/404/Ghost.png';
+import Image from '../Image';
 
 const PageNotFoundContent: React.FC = () => {
   return (
     <S.Container>
       <div className="content">
         <div className="image">
-          <img
+          <Image
             src={GhostImage}
             alt="Página não encontrada"
           />

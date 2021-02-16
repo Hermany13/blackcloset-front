@@ -10,12 +10,15 @@ export const Container = styled.header`
   color: ${(props) => props.theme.colors.text.white};
   font-family: ${(props) => props.theme.fonts.quicksand};
 
-
   a {
     transition: 0.2s;
 
     &:hover {
       color: ${(props) => props.theme.colors.text.whiteLight};
+    }
+
+    img {
+      height: 100%;
     }
   }
 
