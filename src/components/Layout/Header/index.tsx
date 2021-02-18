@@ -4,7 +4,7 @@ import Link from 'next/link';
 // Components
 import Navigation from './Navigation';
 import UserNavigation from './UserNavigation';
-import Image from '../../Image';
+import Image from 'next/image';
 
 // Styled Components
 import * as S from './styles';
@@ -21,6 +21,9 @@ const DesktopHeader: React.FC = () => {
             <Image
               src={LogoImage}
               alt="Logo Black Closet"
+              height={144}
+              width={270}
+              className="logo"
             />
           </a>
         </Link>
@@ -30,7 +33,7 @@ const DesktopHeader: React.FC = () => {
         </div>
       </div>
     </S.Container>
-    );
-}
+  );
+};
 
 export default DesktopHeader;

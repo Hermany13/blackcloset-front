@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-
 export const Container = styled.header`
   background-color: ${(props) => props.theme.colors.primary};
   height: 148px;
@@ -16,15 +15,12 @@ export const Container = styled.header`
     &:hover {
       color: ${(props) => props.theme.colors.text.whiteLight};
     }
-
-    img {
-      height: 100%;
-    }
   }
 
   .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: ${(props) => props.theme.sizes.baseWidth};
 
     ${media.lessThan('medium')`
@@ -32,7 +28,6 @@ export const Container = styled.header`
     `}
 
     .navigation-side {
-      margin: 63px 0;
       display: flex;
       justify-content: space-around;
       width: 72%;

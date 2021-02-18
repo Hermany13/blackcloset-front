@@ -14,4 +14,4 @@ export const Container = styled.nav`
       font-weight: 300;
     }
   }
-`
+`;

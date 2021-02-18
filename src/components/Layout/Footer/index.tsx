@@ -13,15 +13,9 @@ const Footer: React.FC = () => {
   return (
     <S.Container>
       <div className="content">
-        <div className="footer-title">
-          Black Closet Store
-        </div>
-        <p>
-          CNPJ - 50.940.970/0001-45
-        </p>
-        <p>
-          Rua Prof. Maria Aparecida Godoy Valente 825 - Cruzeiro SP
-        </p>
+        <div className="footer-title">Black Closet Store</div>
+        <p>CNPJ - 50.940.970/0001-45</p>
+        <p>Rua Prof. Maria Aparecida Godoy Valente 825 - Cruzeiro SP</p>
         <div>
           <div className="link-title">
             <span>Siga-nos:</span>
@@ -68,7 +62,9 @@ const Footer: React.FC = () => {
         </div>
         <div className="footer-copyright">
           <p>Política de privacidade</p>
-          <span>Copyright 2021 Black Closet Store | Powred by Have Digital</span>
+          <span>
+            Copyright 2021 Black Closet Store | Powred by Have Digital
+          </span>
         </div>
       </div>
     </S.Container>

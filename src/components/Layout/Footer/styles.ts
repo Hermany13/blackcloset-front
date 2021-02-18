@@ -35,7 +35,7 @@ export const Container = styled.div`
         font-size: 19px;
 
         &:nth-child(1) {
-          margin-top: 10px
+          margin-top: 10px;
         }
       }
 
@@ -49,12 +49,12 @@ export const Container = styled.div`
         svg {
           cursor: pointer;
 
-            &:hover {
-              .a {
-                transition: 0.2s;
-                fill: ${(props) => props.theme.colors.text.whiteLight};
-              }
+          &:hover {
+            .a {
+              transition: 0.2s;
+              fill: ${(props) => props.theme.colors.text.whiteLight};
             }
+          }
         }
       }
     }
