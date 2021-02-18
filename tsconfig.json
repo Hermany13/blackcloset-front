@@ -16,9 +16,13 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "pages/_document.js", "pages/_document.jsx"],
-  "files": ["./styles/styled.d.ts", "./@types/images.d.ts"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "files": ["./styles/styled.d.ts", "src/@types/images.d.ts"]
 }
