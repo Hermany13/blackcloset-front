@@ -4,8 +4,6 @@ import media from 'styled-media-query';
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   width: 100%;
-  position: absolute;
-  bottom: 0;
   height: 370px;
   display: flex;
   justify-content: center;

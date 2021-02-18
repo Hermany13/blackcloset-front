@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 
+
 import NProgress from 'nprogress';
 
 import defaultTheme from '../styles/themes/default';
