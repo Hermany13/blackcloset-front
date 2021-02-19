@@ -27,20 +27,8 @@ export const Container = styled.div`
     align-items: center;
 
     .title-container {
-      ${media.lessThan('925px')`
-        width: 700px;
-      `}
-
-      ${media.lessThan('820px')`
-        width: 500px;
-      `}
-
-      ${media.lessThan('600px')`
-        width: 400px;
-      `}
-
-      ${media.lessThan('440px')`
-        width: 300px;
+      ${media.lessThan('medium')`
+        width: 50%;
       `}
     }
   }
