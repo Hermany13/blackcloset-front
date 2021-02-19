@@ -10,7 +10,7 @@ import Image from 'next/image';
 import * as S from './styles';
 
 // Images
-import LogoImage from '../../../assets/Header/logo_header.png';
+import logoimage from '../../../assets/Header/logo_header.png';
 
 const DesktopHeader: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const DesktopHeader: React.FC = () => {
         <Link href="/">
           <a>
             <Image
-              src={LogoImage}
+              src={logoimage}
               alt="Logo Black Closet"
               height={144}
               width={270}
