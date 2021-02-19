@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import customMedia from '../../styles/breakpoints';
 interface IProps {
   color?: string;
 }
@@ -14,6 +14,10 @@ export const Container = styled.div<IProps>`
   font-weight: 300;
   text-transform: uppercase;
   color: ${(props) => props.color};
+
+  ${customMedia.lessThan('phone')`
+      font-size: 9vw;
+  `}
 
   span {
     font-size: 20px;
