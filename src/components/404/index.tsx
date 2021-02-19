@@ -12,17 +12,12 @@ const PageNotFoundContent: React.FC = () => {
     <S.Container>
       <div className="content">
         <div className="image">
-          <Image
-            src={GhostImage}
-            alt="Página não encontrada"
-          />
+          <Image src={GhostImage} alt="Página não encontrada" />
         </div>
-        <span>
-          Ops! A página não foi encontrada...
-        </span>
+        <span>Ops! A página não foi encontrada...</span>
       </div>
     </S.Container>
   );
-}
+};
 
 export default PageNotFoundContent;

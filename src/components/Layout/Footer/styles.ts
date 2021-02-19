@@ -13,6 +13,7 @@ export const Container = styled.div`
   .content {
     width: ${(props) => props.theme.sizes.baseWidth};
     position: relative;
+    padding: 20px;
 
     ${media.lessThan('medium')`
       width: ${(props) => props.theme.sizes.baseWidthMobile};
