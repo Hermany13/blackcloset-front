@@ -10,7 +10,7 @@ import Image from 'next/image';
 import * as S from './styles';
 
 // Images
-import logoimage from '../../../assets/Header/logoheader.png';
+import logoimage from '../../../assets/header/logoheader.png';
 
 const DesktopHeader: React.FC = () => {
   return (
