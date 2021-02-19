@@ -67,6 +67,7 @@ export const Container = styled.div`
 
           &:hover {
             background-color: ${(props) => props.theme.colors.text.whiteLight};
+            color: ${(props) => props.theme.colors.text.white};
           }
         }
       }
@@ -101,17 +102,28 @@ export const Container = styled.div`
 
         &:hover {
           background-color: ${(props) => props.theme.colors.text.whiteLight};
+          color: ${(props) => props.theme.colors.text.white};
+
+          svg {
+            .a {
+              fill: ${(props) => props.theme.colors.text.white};
+            }
+          }
         }
 
         a {
           display: flex;
           justify-content: center;
+          width: 100%;
+          align-items: center;
         }
 
         svg {
           margin-right: 5px;
+          width: 13px;
 
           .a {
+            transition: 0.2s;
             fill: ${(props) => props.theme.colors.primary};
           }
         }
