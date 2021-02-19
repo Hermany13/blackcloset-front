@@ -1,8 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Styled components
 import * as S from './styles';
+
+// Icons
+import CartIcon from '../../assets/card/cart-icon.svg';
 
 const Card: React.FC = () => {
   return (
@@ -17,6 +21,26 @@ const Card: React.FC = () => {
         <div className="blur-content">
           <div className="title">Calça jeans leans jenn</div>
           <label>R$110,00</label>
+          <div className="parcels">5x 22,00 sem juros</div>
+          <div className="cat-container">
+            <div className="cat">Calsas</div>
+            <div className="cat">Jeans</div>
+            <div className="cat">Feminino</div>
+          </div>
+          <div className="text-align-container">
+            <div className="description-container">
+              Calsa jens da renomada lens marca favorita da mais famosas
+              influencers do Brasil.
+            </div>
+          </div>
+          <div className="button-cart">
+            <Link href="#">
+              <a>
+                <CartIcon />
+                Adicionar ao carrinho
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </S.Container>

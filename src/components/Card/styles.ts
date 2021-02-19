@@ -32,14 +32,101 @@ export const Container = styled.div`
     max-height: 80px;
 
     .blur-content {
-      padding: 10px 10px 15px 15px;
+      padding: 15px 10px 15px 15px;
 
       .title {
         margin-bottom: 5px;
+        font-weight: bold;
       }
 
       label {
         font-size: 23px;
+        font-weight: bold;
+      }
+
+      .parcels {
+        margin-top: 8px;
+      }
+
+      .cat-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 5px;
+        margin-top: 10px;
+
+        .cat {
+          font-size: 9px;
+          font-weight: bold;
+          color: ${(props) => props.theme.colors.primary};
+          background-color: ${(props) => props.theme.colors.text.white};
+          padding: 5px;
+          border-radius: 10px;
+          text-align: center;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            background-color: ${(props) => props.theme.colors.text.whiteLight};
+            color: ${(props) => props.theme.colors.text.white};
+          }
+        }
+      }
+
+      .text-align-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 10px;
+
+        .description-container {
+          width: 218px;
+          height: 123px;
+        }
+      }
+
+      .button-cart {
+        background-color: ${(props) => props.theme.colors.text.white};
+        color: ${(props) => props.theme.colors.primary};
+        font-size: 9px;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        align-items: center;
+        width: 160px;
+        height: 27px;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: ${(props) => props.theme.colors.text.whiteLight};
+          color: ${(props) => props.theme.colors.text.white};
+
+          svg {
+            .a {
+              fill: ${(props) => props.theme.colors.text.white};
+            }
+          }
+        }
+
+        a {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          align-items: center;
+        }
+
+        svg {
+          margin-right: 5px;
+          width: 13px;
+
+          .a {
+            transition: 0.2s;
+            fill: ${(props) => props.theme.colors.primary};
+          }
+        }
       }
     }
   }
