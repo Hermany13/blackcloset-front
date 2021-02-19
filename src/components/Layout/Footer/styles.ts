@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 100%;
   height: 370px;
   display: flex;
+  position: relative;
   justify-content: center;
   font-family: ${(props) => props.theme.fonts.quicksand};
   color: ${(props) => props.theme.colors.text.white};
@@ -63,8 +64,7 @@ export const Container = styled.div`
     .footer-copyright {
       width: 100%;
       text-align: center;
-      position: absolute;
-      bottom: 15px;
+      margin-top: 20px;
 
       p {
         font-size: 12px;
