@@ -4,10 +4,10 @@ import React from 'react';
 import * as S from './styles';
 
 // SVGs
-import FacebookIcon from '../../../assets/footer/facebook-Icon.svg';
-import InstagramIcon from '../../../assets/footer/instagram-Icon.svg';
-import WhatsappIcon from '../../../assets/footer/whatsapp-Icon.svg';
-import GmailIcon from '../../../assets/footer/gmail-Icon.svg';
+import FacebookIcon from '../../../assets/footer/facebook-icon.svg';
+import InstagramIcon from '../../../assets/footer/instagram-icon.svg';
+import WhatsappIcon from '../../../assets/footer/whatsapp-icon.svg';
+import GmailIcon from '../../../assets/footer/gmail-icon.svg';
 
 const Footer: React.FC = () => {
   return (
