@@ -1,6 +1,7 @@
 import { generateMedia } from 'styled-media-query';
 
 interface Breakpoints {
+  minimal: string;
   phone: string;
   tablet: string;
   laptop: string;
@@ -9,6 +10,7 @@ interface Breakpoints {
 }
 
 const media = generateMedia<Breakpoints>({
+  minimal: '285px',
   phone: '440px',
   tablet: '600px',
   laptop: '885px',

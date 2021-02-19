@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
+import customMedia from '../../../styles/breakpoints';
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
@@ -16,6 +17,10 @@ export const Container = styled.div`
     position: relative;
     padding: 20px;
 
+    ${customMedia.lessThan('minimal')`
+        padding-top: 20px;
+    `}
+
     ${media.lessThan('medium')`
       width: ${(props) => props.theme.sizes.baseWidthMobile};
     `}
@@ -23,6 +28,14 @@ export const Container = styled.div`
     .footer-title {
       font-size: 30px;
       margin-top: 40px;
+
+      ${customMedia.lessThan('minimal')`
+         margin-top: 20px;
+      `}
+
+      ${customMedia.lessThan('phone')`
+         font-size: 10vw;
+      `}
     }
 
     p {
@@ -68,10 +81,18 @@ export const Container = styled.div`
 
       p {
         font-size: 12px;
+
+        ${customMedia.lessThan('phone')`
+          font-size: 3vw;
+        `}
       }
 
       span {
         font-size: 13px;
+
+        ${customMedia.lessThan('phone')`
+          font-size: 3vw;
+        `}
       }
     }
   }
