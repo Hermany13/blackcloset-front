@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
+import customMedia from '../../../styles/breakpoints';
 
 export const Container = styled.div`
   width: 100%;
@@ -27,8 +27,20 @@ export const Container = styled.div`
     align-items: center;
 
     .title-container {
-      ${media.lessThan('medium')`
-        width: 50%;
+      ${customMedia.lessThan('desktop')`
+        width: 700px;
+      `}
+
+      ${customMedia.lessThan('laptop')`
+        width: 500px;
+      `}
+
+      ${customMedia.lessThan('tablet')`
+        width: 400px;
+      `}
+
+      ${customMedia.lessThan('phone')`
+        width: 300px;
       `}
     }
   }
