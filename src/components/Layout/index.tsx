@@ -17,6 +17,7 @@ const Layout: React.FC = ({ children }) => {
       )
     ) {
       setIsMobile(true);
+      console.log(isMobile);
     }
   }, []);
 
