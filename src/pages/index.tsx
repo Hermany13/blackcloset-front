@@ -1,6 +1,6 @@
 import HomeContent from '../components/Home/index';
 import { NextPage } from 'next';
-import Head from "next/head";
+import Head from 'next/head';
 import Layout from '../components/Layout';
 
 const IndexPage: NextPage = () => (
@@ -9,13 +9,24 @@ const IndexPage: NextPage = () => (
       <title>Black Closet</title>
       <meta
         name="description"
-        content="Melhores produtos de moda feminina para sua beleza e bem estar!"
+        content="Seja bem vindo a Balck Closet, a melhor loja de produtos de moda feminina para sua beleza e bem estar. Ouse e use aquilo que te faz bem!"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Black Closet" />
+      <meta property="og:url" content="https://blackcloset-front.vercel.app/" />
+      <meta
+        property="og:description"
+        content="Seja bem vindo a Balck Closet, a melhor loja de moda feminina!"
+      />
+      <meta
+        property="og:image"
+        content="https://i.ibb.co/6RMzj7V/Black-closet-new-logo.jpg"
       />
     </Head>
     <Layout>
       <HomeContent />
     </Layout>
   </>
-)
+);
 
-export default IndexPage
+export default IndexPage;
