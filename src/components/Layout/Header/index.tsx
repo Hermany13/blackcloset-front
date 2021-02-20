@@ -2,13 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Helpers
-import { isMobile } from 'utils/helpers/DeviceHelper';
-
 // Components
 import Navigation from './Navigation';
 import UserNavigation from './UserNavigation';
-import MobileMenu from './MobileMenu';
 
 // Styled Components
 import * as S from './styles';
@@ -32,14 +28,8 @@ const DesktopHeader: React.FC = () => {
           </a>
         </Link>
         <div className="navigation-side">
-          {isMobile() ? (
-            <MobileMenu />
-          ) : (
-            <>
-              <Navigation />
-              <UserNavigation />
-            </>
-          )}
+          <Navigation />
+          <UserNavigation />
         </div>
       </div>
     </S.Container>
