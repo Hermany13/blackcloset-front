@@ -1,7 +1,9 @@
-import HomeContent from '../components/Home/index';
 import { NextPage } from 'next';
 import Head from 'next/head';
-import Layout from '../components/Layout';
+
+// Components
+import Layout from 'components/Layout';
+import HomeContent from 'components/Home/index';
 
 const IndexPage: NextPage = () => (
   <>

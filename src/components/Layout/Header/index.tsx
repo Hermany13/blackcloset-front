@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // Helpers
-import { isMobile } from '../../../utils/helpers/DeviceHelper';
+import { isMobile } from 'utils/helpers/DeviceHelper';
 
 // Components
 import Navigation from './Navigation';
@@ -14,7 +14,7 @@ import MobileMenu from './MobileMenu';
 import * as S from './styles';
 
 // Images
-import logoimage from '../../../assets/header/logoheader.png';
+import logoimage from 'assets/header/logoheader.png';
 
 const DesktopHeader: React.FC = () => {
   return (

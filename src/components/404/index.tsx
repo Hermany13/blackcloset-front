@@ -5,7 +5,7 @@ import Image from 'next/image';
 import * as S from './styles';
 
 // Images
-import GhostImage from '../../assets/404/Ghost.png';
+import GhostImage from 'assets/404/Ghost.png';
 
 const PageNotFoundContent: React.FC = () => {
   return (

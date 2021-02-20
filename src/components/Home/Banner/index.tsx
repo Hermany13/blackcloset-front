@@ -7,8 +7,8 @@ import Image from 'next/image';
 import * as S from './styles';
 
 // Images
-import BlackBanner from '../../../assets/home/banner.jpg';
-import BannerTitle from '../../../assets/home/title.png';
+import BlackBanner from 'assets/home/banner.jpg';
+import BannerTitle from 'assets/home/title.png';
 
 const Banner: React.FC = () => {
   return (
