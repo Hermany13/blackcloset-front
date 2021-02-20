@@ -28,12 +28,13 @@ const MobileMenu: React.FC = () => {
       </S.Container>
       <S.SideMenu click={click}>
         <div className="side-menu-content">
-          <div className="button-container">
+          <div className="button-container" onClick={() => setClick(false)}>
             <div className="click-listener" onClick={() => setClick(false)}>
               <MenuIcon />
             </div>
           </div>
           <div className="side-menu-body">
+            <div className="clickaway" onClick={() => setClick(false)} />
             <div className="nav-container">
               <Navigation />
             </div>
