@@ -26,11 +26,6 @@ export const Container = styled.div`
 
     .image {
       margin-top: 30px;
-      img {
-        width: 800px;
-        height: 100%;
-        object-fit: cover;
-      }
     }
   }
 `;

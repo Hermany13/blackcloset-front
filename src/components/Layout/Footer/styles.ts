@@ -36,6 +36,10 @@ export const Container = styled.div`
       ${customMedia.lessThan('phone')`
          font-size: 10vw;
       `}
+
+      ${customMedia.lessThan('tablet')`
+         margin-top: 20px;
+      `}
     }
 
     p {
