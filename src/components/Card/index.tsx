@@ -12,7 +12,7 @@ const Card: React.FC = () => {
   return (
     <S.Container>
       <Image
-        src="https://lh3.googleusercontent.com/--d6fY3RBlrY/YC76mW_V9AI/AAAAAAAAAc4/1WGE-klyaTsBiSfj2PxF2v3i8VTUAAV0gCLcBGAsYHQ/s0/1612216763169.jpg"
+        src="https://lh3.googleusercontent.com/-qvZOUOJYGBY/YC76nZrJ2rI/AAAAAAAAAc8/wj0tC7BM1jUoJJkE5MjL5MiZDIBjhIJyACK8BGAsYHg/s0/1612216763169.jpg"
         alt="Roupa"
         layout="fill"
         objectFit="cover"

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import customMedia from 'styles/breakpoints';
 import media from 'styled-media-query';
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
