@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
-import customMedia from '../../../styles/breakpoints';
+import customMedia from 'styles/breakpoints';
 
 export const Container = styled.header`
   background-color: ${(props) => props.theme.colors.primary};

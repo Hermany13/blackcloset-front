@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import customMedia from '../../../styles/breakpoints';
+import customMedia from 'styles/breakpoints';
 import media from 'styled-media-query';
 
 export const Container = styled.div`

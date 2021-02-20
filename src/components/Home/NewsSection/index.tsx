@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Components
-import SectionTitle from '../../SectionTitle/index';
-import Card from '../../Card';
+import SectionTitle from 'components/SectionTitle';
+import Card from 'components/Card';
 
 // Styled components
 import * as S from './styles';

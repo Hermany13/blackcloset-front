@@ -1,14 +1,14 @@
 import React from 'react';
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
 // Styled Components
 import * as S from './styles';
 
 // Images
-import LupeIcon from '../../../../assets/header/lupe_icon.png';
-import CartIcon from '../../../../assets/header/cart_icon.png';
-import PersonIcon from '../../../../assets/header/person_icon.png';
+import LupeIcon from 'assets/header/lupe_icon.png';
+import CartIcon from 'assets/header/cart_icon.png';
+import PersonIcon from 'assets/header/person_icon.png';
 
 const UserNavigation: React.FC = () => {
   return (
@@ -53,6 +53,6 @@ const UserNavigation: React.FC = () => {
       </ul>
     </S.Container>
   );
-}
+};
 
 export default UserNavigation;
