@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 // Ultils js
 import { setSideMenu } from '../../../../utils/js/animations';
