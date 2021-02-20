@@ -61,7 +61,7 @@ export const SideMenu = styled.div<ISideMenuProps>`
 
       .clickaway {
         background-color: transparent;
-        width: 20%;
+        width: 35%;
       }
 
       .nav-container {
@@ -75,11 +75,12 @@ export const SideMenu = styled.div<ISideMenuProps>`
             justify-content: center;
 
             li {
-              padding: 20px;
-              font-size: 6vw;
+              padding: 15px 20px;
+              font-size: 5vw;
               width: 100%;
-              font-weight: 600;
+              font-weight: 300;
               transition: 0.2s;
+              min-width: 185px;
 
               &:hover {
                 background-color: ${(props) => props.theme.colors.primary};
