@@ -11,7 +11,7 @@ import LupeIcon from '../../../../assets/header/lupe_icon.svg';
 
 const UserNavigation: React.FC = () => {
   return (
-    <S.Container>
+    <S.Container className="user-navigation">
       <ul>
         <li>
           <Link href="/">
