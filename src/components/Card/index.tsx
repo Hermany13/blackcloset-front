@@ -37,7 +37,7 @@ const Card: React.FC = () => {
             <Link href="#">
               <a>
                 <CartIcon />
-                Adicionar ao carrinho
+                Mais detalhes
               </a>
             </Link>
           </div>

@@ -10,6 +10,22 @@ export const Container = styled.div`
 
     li {
       list-style: none;
+
+      &:hover {
+        svg {
+          .a {
+            fill: ${(props) => props.theme.colors.text.whiteLight};
+          }
+        }
+      }
+
+      svg {
+        max-height: 17px;
+
+        .a {
+          transition: 0.2s;
+        }
+      }
     }
   }
-`
+`;

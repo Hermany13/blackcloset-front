@@ -36,12 +36,12 @@ export const Container = styled.div`
 
       .title {
         margin-bottom: 5px;
-        font-weight: bold;
+        font-weight: 500;
       }
 
       label {
         font-size: 23px;
-        font-weight: bold;
+        font-weight: 500;
       }
 
       .parcels {
@@ -87,7 +87,7 @@ export const Container = styled.div`
       .button-cart {
         background-color: ${(props) => props.theme.colors.text.white};
         color: ${(props) => props.theme.colors.primary};
-        font-size: 9px;
+        font-size: 11px;
         display: flex;
         justify-content: center;
         padding: 20px;
