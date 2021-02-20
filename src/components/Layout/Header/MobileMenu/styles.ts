@@ -20,11 +20,11 @@ export const Container = styled.div`
 `;
 
 export const SideMenu = styled.div<ISideMenuProps>`
-  width: 80%;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  height: 200vh;
   background-color: transparent;
   z-index: 1;
 
@@ -55,11 +55,18 @@ export const SideMenu = styled.div<ISideMenuProps>`
     }
 
     .side-menu-body {
-      height: 100vh;
+      height: 200vh;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+
+      .clickaway {
+        background-color: transparent;
+        width: 20%;
+      }
 
       .nav-container {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
         nav {
           width: 100%;
 

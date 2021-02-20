@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 // Ultils js
 import { setSideMenu } from '../../../../utils/js/animations';
@@ -28,12 +29,13 @@ const MobileMenu: React.FC = () => {
       </S.Container>
       <S.SideMenu click={click}>
         <div className="side-menu-content">
-          <div className="button-container">
+          <div className="button-container" onClick={() => setClick(false)}>
             <div className="click-listener" onClick={() => setClick(false)}>
               <MenuIcon />
             </div>
           </div>
           <div className="side-menu-body">
+            <div className="clickaway" onClick={() => setClick(false)} />
             <div className="nav-container">
               <Navigation />
             </div>
