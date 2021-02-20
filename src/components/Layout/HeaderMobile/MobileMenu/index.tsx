@@ -5,6 +5,7 @@ import { setSideMenu } from '../../../../utils/js/animations';
 
 // Components
 import Navigation from '../Navigation';
+import UserNavigation from '../UserNavigation';
 
 // Styled components
 import * as S from './styles';
@@ -37,6 +38,7 @@ const MobileMenu: React.FC = () => {
             <div className="clickaway" onClick={() => setClick(false)} />
             <div className="nav-container">
               <Navigation />
+              <UserNavigation />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
+import customMedia from 'styles/breakpoints';
 
 export const Container = styled.div`
   width: 100%;
@@ -16,8 +16,12 @@ export const Container = styled.div`
     font-weight: bold;
     color: ${(props) => props.theme.colors.primary};
 
-    ${media.lessThan('medium')`
-      width: ${(props) => props.theme.sizes.baseWidthMobile};
+    ${customMedia.lessThan('fullsize')`
+        width: 90%;
+    `}
+
+    ${customMedia.lessThan('tablet')`
+        width: 70%;
     `}
 
     span {

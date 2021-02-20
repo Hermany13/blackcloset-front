@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // Components
-import Navigation from './Navigation';
-import UserNavigation from './UserNavigation';
+import MobileMenu from './MobileMenu';
 
 // Styled Components
 import * as S from './styles';
@@ -28,8 +27,7 @@ const DesktopHeader: React.FC = () => {
           </a>
         </Link>
         <div className="navigation-side">
-          <Navigation />
-          <UserNavigation />
+          <MobileMenu />
         </div>
       </div>
     </S.Container>

@@ -88,6 +88,11 @@ export const SideMenu = styled.div<ISideMenuProps>`
             }
           }
         }
+
+        .user-navigation {
+          padding: 10px 20px;
+          min-width: 200px;
+        }
       }
     }
   }
