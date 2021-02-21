@@ -30,8 +30,8 @@ const Banner: React.FC = () => {
             src={BannerTitle}
             alt="Banner black closet"
             layout="intrinsic"
-            height={120}
-            width={650}
+            height={136}
+            width={714}
           />
         </div>
       </div>

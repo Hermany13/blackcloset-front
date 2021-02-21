@@ -21,8 +21,8 @@ const DesktopHeader: React.FC = () => {
             <Image
               src={logoimage}
               alt="Logo Black Closet"
-              height={144}
-              width={270}
+              height={148}
+              width={283}
               className="logo"
             />
           </a>
