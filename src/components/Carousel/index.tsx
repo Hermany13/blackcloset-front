@@ -24,6 +24,7 @@ const Carousel: React.FC = () => {
         type="button"
         onClick={() => scroll('prev')}
         style={{ paddingRight: '2px' }}
+        aria-label="Slides anteriores"
       >
         <RightIcon />
       </button>
@@ -53,6 +54,7 @@ const Carousel: React.FC = () => {
         type="button"
         onClick={() => scroll('next')}
         style={{ paddingLeft: '2px' }}
+        aria-label="Próximos slides"
       >
         <LeftIcon />
       </button>
