@@ -6,6 +6,7 @@ interface Breakpoints {
   phone: string;
   tablet: string;
   laptop: string;
+  minDesktop: string;
   desktop: string;
   fullsize: string;
 }
@@ -17,6 +18,7 @@ const media = generateMedia<Breakpoints>({
   tablet: '600px',
   laptop: '885px',
   desktop: '925px',
+  minDesktop: '1000px',
   fullsize: '1060px',
 });
 
