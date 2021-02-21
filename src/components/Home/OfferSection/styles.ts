@@ -19,10 +19,14 @@ export const Container = styled.section`
     `}
 
     ${customMedia.lessThan('laptop')`
-        width: 275px;
+        width: 320px;
     `}
 
     ${customMedia.lessThan('phone')`
+        width: 320px;
+    `}
+
+    ${customMedia.lessThan('iphoneSe')`
         width: 231px;
     `}
 
