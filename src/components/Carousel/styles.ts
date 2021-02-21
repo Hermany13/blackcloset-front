@@ -72,10 +72,6 @@ export const Items = styled.div`
     > div {
       box-shadow: none;
 
-      ${customMedia.lessThan('phone')`
-        width: 200px;
-      `}
-
       ${customMedia.lessThan('iphoneSe')`
         width: 180px;
       `}
