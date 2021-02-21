@@ -4,6 +4,7 @@ import React from 'react';
 import Banner from './Banner';
 import NewsSection from './NewsSection';
 import OfferSection from './OfferSection';
+import AboutSection from './AboutSection';
 
 // Styled components
 import * as S from './styles';
@@ -14,6 +15,7 @@ const HomeLayout: React.FC = () => {
       <Banner />
       <NewsSection />
       <OfferSection />
+      <AboutSection />
     </S.Container>
   );
 };
