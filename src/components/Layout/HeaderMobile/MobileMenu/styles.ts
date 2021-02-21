@@ -67,8 +67,9 @@ export const SideMenu = styled.div<ISideMenuProps>`
       .nav-container {
         background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
+
         nav {
-          width: 100%;
+          width: 80vw;
 
           ul {
             display: table;
