@@ -8,9 +8,6 @@ export const Container = styled.section`
   justify-content: center;
   padding: 40px 0;
 
-  /* TODO REMOVE MAARGIN */
-  margin-bottom: 40px;
-
   .content {
     width: ${(props) => props.theme.sizes.baseWidth};
 

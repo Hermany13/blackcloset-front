@@ -6,7 +6,7 @@ module.exports = withPlugins([
   [optimizedImages],
   {
     images: {
-      domains: ['lh3.googleusercontent.com'],
+      domains: ['lh3.googleusercontent.com', 'i.ibb.co'],
     },
   },
 ]);
