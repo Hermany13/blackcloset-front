@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import media from 'styled-media-query';
 import customMedia from 'styles/breakpoints';
 
 export const Container = styled.section`
