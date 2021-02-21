@@ -19,6 +19,7 @@ const AboutSection: React.FC = () => {
               layout="responsive"
               width={200}
               height={195}
+              alt="Logo da blackcloset"
             />
           </div>
           <div className="text-container">
