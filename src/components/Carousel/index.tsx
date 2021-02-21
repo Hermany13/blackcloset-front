@@ -7,8 +7,8 @@ import Card from 'components/Card';
 import * as S from './styles';
 
 // Icons
-import RightIcon from '../../../../assets/home/right_icon.svg';
-import LeftIcon from '../../../../assets/home/left_icon.svg';
+import RightIcon from '../../assets/home/right_icon.svg';
+import LeftIcon from '../../assets/home/left_icon.svg';
 
 const Carousel: React.FC = () => {
   const itemsRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,11 @@ const Carousel: React.FC = () => {
         </div>
       </S.Items>
 
-      <button type="button" onClick={() => scroll('next')}>
+      <button
+        type="button"
+        onClick={() => scroll('next')}
+        style={{ paddingLeft: '2px' }}
+      >
         <LeftIcon />
       </button>
     </S.Container>

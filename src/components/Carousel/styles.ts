@@ -10,6 +10,10 @@ export const Container = styled.div`
   margin-top: 50px;
   margin-bottom: 70px;
 
+  ${customMedia.lessThan('fullsize')`
+      margin-bottom: 50px;
+  `}
+
   button {
     background: none;
     padding: 0;
@@ -23,6 +27,10 @@ export const Container = styled.div`
     transition: 0.2s;
     margin-left: 20px;
     margin-right: 20px;
+
+    ${customMedia.lessThan('laptop')`
+        display: none;
+    `}
 
     ${media.lessThan('medium')`
       margin: 0 auto;

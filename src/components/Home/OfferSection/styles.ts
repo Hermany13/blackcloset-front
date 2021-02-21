@@ -15,15 +15,27 @@ export const Container = styled.section`
     width: ${(props) => props.theme.sizes.baseWidth};
 
     ${customMedia.lessThan('fullsize')`
-        width: 750px;
+        width: 740px;
     `}
 
     ${customMedia.lessThan('laptop')`
-        width: 370px;
+        width: 275px;
     `}
 
     ${customMedia.lessThan('phone')`
-        width: 90%;
+        width: 231px;
     `}
+
+    .mobile-message {
+      display: none;
+      width: 100%;
+      text-align: center;
+      color: ${(props) => props.theme.colors.text.white};
+      font-family: ${(props) => props.theme.fonts.quicksand};
+
+      ${customMedia.lessThan('fullsize')`
+        display: block;
+      `}
+    }
   }
 `;
