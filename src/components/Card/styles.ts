@@ -44,6 +44,12 @@ export const Container = styled.div`
         font-weight: 500;
       }
 
+      .is-offer {
+        margin-left: 5px;
+        text-decoration: line-through;
+        color: ${(props) => props.theme.colors.text.whiteLight};
+      }
+
       .parcels {
         margin-top: 8px;
       }

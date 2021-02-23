@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,33 +8,86 @@ import * as S from './styles';
 // Icons
 import CartIcon from '../../assets/card/cart-icon.svg';
 
-const Card: React.FC = () => {
+// Interfaces
+interface ICategorie {
+  id: number;
+  label: string;
+}
+
+interface ICardProps {
+  id: number;
+  slug: string;
+  img: string;
+  title: string;
+  price: number;
+  isOffer: boolean;
+  offerPrice: number;
+  parcels: number;
+  categories: ICategorie[];
+  description: string;
+}
+
+const Card: React.FC<ICardProps> = ({
+  id,
+  slug,
+  img,
+  title,
+  categories,
+  description,
+  isOffer,
+  offerPrice,
+  parcels,
+  price,
+}) => {
+  // Refactors
+  const { offerPriceFormated, priceFormated, parcellsPrice } = useMemo(
+    () => ({
+      offerPriceFormated: offerPrice.toLocaleString('pt-br', {
+        minimumFractionDigits: 2,
+      }),
+      priceFormated: price.toLocaleString('pt-br', {
+        minimumFractionDigits: 2,
+      }),
+      parcellsPrice: isOffer
+        ? (offerPrice / parcels).toLocaleString('pt-br', {
+            minimumFractionDigits: 2,
+          })
+        : (price / parcels).toLocaleString('pt-br', {
+            minimumFractionDigits: 2,
+          }),
+    }),
+    [isOffer, offerPrice],
+  );
+
   return (
     <S.Container>
-      <Image
-        src="https://lh3.googleusercontent.com/-qvZOUOJYGBY/YC76nZrJ2rI/AAAAAAAAAc8/wj0tC7BM1jUoJJkE5MjL5MiZDIBjhIJyACK8BGAsYHg/s0/1612216763169.jpg"
-        alt="Roupa"
-        layout="fill"
-        objectFit="cover"
-      />
+      <Image src={img} alt="Roupa" layout="fill" objectFit="cover" />
       <div className="blur">
         <div className="blur-content">
-          <div className="title">Calça jeans leans jenn</div>
-          <label>R$110,00</label>
-          <div className="parcels">5x 22,00 sem juros</div>
+          <div className="title">{title}</div>
+          {isOffer ? (
+            <label>R${offerPriceFormated}</label>
+          ) : (
+            <label>R${priceFormated}</label>
+          )}
+          {isOffer ? <span className="is-offer">R${priceFormated}</span> : ''}
+          <div className="parcels">
+            {parcels}x {parcellsPrice} sem juros
+          </div>
           <div className="cat-container">
-            <div className="cat">Calsas</div>
-            <div className="cat">Jeans</div>
-            <div className="cat">Feminino</div>
+            {categories.map((cat) => {
+              return (
+                <div className="cat" key={cat.id}>
+                  {cat.label}
+                </div>
+              );
+            })}
           </div>
           <div className="text-align-container">
-            <div className="description-container">
-              Calsa jens da renomada lens marca favorita da mais famosas
-              influencers do Brasil.
-            </div>
+            <div className="description-container">{description}</div>
           </div>
           <div className="button-cart">
-            <Link href="#">
+            <Link href={`/produto/${slug}/${id}`}>
               <a>
                 <CartIcon />
                 Mais detalhes
