@@ -87,7 +87,7 @@ const Card: React.FC<ICardProps> = ({
             <div className="description-container">{description}</div>
           </div>
           <div className="button-cart">
-            <Link href={`/produto/${slug}`}>
+            <Link href={`/produto/${slug}/${id}`}>
               <a>
                 <CartIcon />
                 Mais detalhes
