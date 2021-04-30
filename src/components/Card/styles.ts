@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.div`
   width: 249px;
@@ -30,6 +31,13 @@ export const Container = styled.div`
     transition: max-height 0.5s;
     overflow: hidden;
     max-height: 80px;
+
+    transition-delay: 150ms;
+    transition-property: max-height;
+
+    ${media.lessThan('medium')`
+      transition-delay: 0ms;
+    `}
 
     .blur-content {
       padding: 15px 10px 15px 15px;
