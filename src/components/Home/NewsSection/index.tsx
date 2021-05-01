@@ -6,18 +6,24 @@ import Card from 'components/Card';
 
 // Styled components
 import * as S from './styles';
+import Product from 'models/Product';
 
 const NewsSection: React.FC = () => {
-  const data = {
+  const data: Product = {
     id: 1,
     slug: 'cals-jenas',
-    img:
+    image:
       'https://lh3.googleusercontent.com/-qvZOUOJYGBY/YC76nZrJ2rI/AAAAAAAAAc8/wj0tC7BM1jUoJJkE5MjL5MiZDIBjhIJyACK8BGAsYHg/s0/1612216763169.jpg',
-    title: 'Calça jeans leans jenn',
+    name: 'Calça jeans leans jenn',
     price: 120,
-    isOffer: false,
+    isOffer: 0,
     offerPrice: 0,
     parcels: 5,
+    description:
+      'Calsa jens da renomada lens marca favorita da mais famosas influencers do Brasil.',
+    status: 1,
+    created_at: '',
+    updated_at: '',
     categories: [
       {
         id: 1,
@@ -32,8 +38,6 @@ const NewsSection: React.FC = () => {
         label: 'Feminino',
       },
     ],
-    description:
-      'Calsa jens da renomada lens marca favorita da mais famosas influencers do Brasil.',
   };
 
   return (
@@ -41,78 +45,12 @@ const NewsSection: React.FC = () => {
       <div className="content">
         <SectionTitle color="#000" title="Novidades" />
         <div className="cards-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
+          <Card {...data} />
+          <Card {...data} />
+          <Card {...data} />
+          <Card {...data} />
+          <Card {...data} />
         </div>
       </div>
     </S.Container>

@@ -9,6 +9,7 @@ import * as S from './styles';
 // Icons
 import RightIcon from '../../assets/home/right_icon.svg';
 import LeftIcon from '../../assets/home/left_icon.svg';
+import Product from 'models/Product';
 
 const Carousel: React.FC = () => {
   const itemsRef = useRef<HTMLDivElement>(null);
@@ -18,16 +19,21 @@ const Carousel: React.FC = () => {
     itemsRef.current?.scrollBy(ammountToScroll, 0);
   }, []);
 
-  const data = {
+  const data: Product = {
     id: 1,
     slug: 'cals-jenas',
-    img:
+    image:
       'https://lh3.googleusercontent.com/-qvZOUOJYGBY/YC76nZrJ2rI/AAAAAAAAAc8/wj0tC7BM1jUoJJkE5MjL5MiZDIBjhIJyACK8BGAsYHg/s0/1612216763169.jpg',
-    title: 'Calça jeans leans jenn',
-    price: 110,
-    isOffer: true,
+    name: 'Calça jeans leans jenn',
+    price: 120,
+    isOffer: 1,
     offerPrice: 73,
     parcels: 5,
+    description:
+      'Calsa jens da renomada lens marca favorita da mais famosas influencers do Brasil.',
+    status: 1,
+    created_at: '',
+    updated_at: '',
     categories: [
       {
         id: 1,
@@ -42,8 +48,6 @@ const Carousel: React.FC = () => {
         label: 'Feminino',
       },
     ],
-    description:
-      'Calsa jens da renomada lens marca favorita da mais famosas influencers do Brasil.',
   };
 
   return (
@@ -59,88 +63,22 @@ const Carousel: React.FC = () => {
 
       <S.Items ref={itemsRef}>
         <div className="card-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
         </div>
         <div className="card-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
         </div>
         <div className="card-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
         </div>
         <div className="card-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
         </div>
         <div className="card-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
         </div>
         <div className="card-container">
-          <Card
-            id={data.id}
-            categories={data.categories}
-            description={data.description}
-            img={data.img}
-            isOffer={data.isOffer}
-            offerPrice={data.offerPrice}
-            parcels={data.parcels}
-            price={data.price}
-            slug={data.slug}
-            title={data.title}
-          />
+          <Card {...data} />
         </div>
       </S.Items>
 

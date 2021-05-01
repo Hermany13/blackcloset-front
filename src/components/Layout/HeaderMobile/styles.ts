@@ -9,6 +9,10 @@ export const Container = styled.header`
   color: ${(props) => props.theme.colors.text.white};
   font-family: ${(props) => props.theme.fonts.quicksand};
 
+  ${media.greaterThan('medium')`
+    display: none;
+  `}
+
   a {
     transition: 0.2s;
 

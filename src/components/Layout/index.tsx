@@ -14,10 +14,9 @@ const Footer = dynamic(() => import('components/Layout/Footer'));
 const Layout: React.FC = ({ children }) => {
   return (
     <>
-      {isMobile() ? <MobileHeader /> : <DesktopHeader />}
-
+      <MobileHeader />
+      <DesktopHeader />
       <S.Content>{children}</S.Content>
-
       <Footer />
     </>
   );
