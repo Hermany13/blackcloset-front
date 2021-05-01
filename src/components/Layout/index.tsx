@@ -1,9 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-// Ultils
-import { isMobile } from 'utils/helpers/DeviceHelper';
-
+// styled components
 import * as S from './styles';
 
 // Dynamic components
