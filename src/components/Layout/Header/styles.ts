@@ -14,6 +14,10 @@ export const Container = styled.header`
       height: 100px;
   `}
 
+  ${media.lessThan('medium')`
+      display: none;
+  `}
+
   a {
     transition: 0.2s;
 

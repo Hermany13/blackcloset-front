@@ -1,9 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-// Ultils
-import { isMobile } from 'utils/helpers/DeviceHelper';
-
+// styled components
 import * as S from './styles';
 
 // Dynamic components
@@ -14,10 +12,9 @@ const Footer = dynamic(() => import('components/Layout/Footer'));
 const Layout: React.FC = ({ children }) => {
   return (
     <>
-      {isMobile() ? <MobileHeader /> : <DesktopHeader />}
-
+      <MobileHeader />
+      <DesktopHeader />
       <S.Content>{children}</S.Content>
-
       <Footer />
     </>
   );

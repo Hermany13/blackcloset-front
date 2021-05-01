@@ -9,73 +9,51 @@ import * as S from './styles';
 import CartIcon from '../../assets/card/cart-icon.svg';
 
 // Interfaces
-interface ICategorie {
-  id: number;
-  label: string;
-}
+import Product from 'models/Product';
 
-interface ICardProps {
-  id: number;
-  slug: string;
-  img: string;
-  title: string;
-  price: number;
-  isOffer: boolean;
-  offerPrice: number;
-  parcels: number;
-  categories: ICategorie[];
-  description: string;
-}
-
-const Card: React.FC<ICardProps> = ({
-  id,
-  slug,
-  img,
-  title,
-  categories,
-  description,
-  isOffer,
-  offerPrice,
-  parcels,
-  price,
-}) => {
+const Card: React.FC<Product> = (product: Product) => {
   // Refactors
-  const { offerPriceFormated, priceFormated, parcellsPrice } = useMemo(
+  const { offerPriceFormatted, priceFormatted, parcelsPrice } = useMemo(
     () => ({
-      offerPriceFormated: offerPrice.toLocaleString('pt-br', {
+      offerPriceFormatted: product.offerPrice.toLocaleString('pt-br', {
         minimumFractionDigits: 2,
       }),
-      priceFormated: price.toLocaleString('pt-br', {
+      priceFormatted: product.price.toLocaleString('pt-br', {
         minimumFractionDigits: 2,
       }),
-      parcellsPrice: isOffer
-        ? (offerPrice / parcels).toLocaleString('pt-br', {
-            minimumFractionDigits: 2,
-          })
-        : (price / parcels).toLocaleString('pt-br', {
-            minimumFractionDigits: 2,
-          }),
+      parcelsPrice:
+        product.isOffer === 1
+          ? (product.offerPrice / product.parcels).toLocaleString('pt-br', {
+              minimumFractionDigits: 2,
+            })
+          : (product.price / product.parcels).toLocaleString('pt-br', {
+              minimumFractionDigits: 2,
+            }),
     }),
-    [isOffer, offerPrice],
+    [product.isOffer, product.offerPrice],
   );
 
   return (
     <S.Container>
-      <Image src={img} alt="Roupa" layout="fill" objectFit="cover" />
+      <Image src={product.image} alt="Roupa" layout="fill" objectFit="cover" />
       <div className="blur">
         <div className="blur-content">
-          <div className="title">{title}</div>
-          {isOffer ? (
-            <label>R${offerPriceFormated}</label>
+          <div className="title">{product.name}</div>
+          {product.isOffer === 1 ? (
+            <label>R${offerPriceFormatted}</label>
           ) : (
-            <label>R${priceFormated}</label>
+            <label>R${priceFormatted}</label>
           )}
-          {isOffer ? <span className="is-offer">R${priceFormated}</span> : ''}
+          {product.isOffer === 1 ? (
+            <span className="is-offer">R${priceFormatted}</span>
+          ) : (
+            ''
+          )}
           <div className="parcels">
-            {parcels}x {parcellsPrice} sem juros
+            {product.parcels}x {parcelsPrice} sem juros
           </div>
           <div className="cat-container">
-            {categories.map((cat) => {
+            {product.categories.map((cat) => {
               return (
                 <div className="cat" key={cat.id}>
                   {cat.label}
@@ -84,10 +62,10 @@ const Card: React.FC<ICardProps> = ({
             })}
           </div>
           <div className="text-align-container">
-            <div className="description-container">{description}</div>
+            <div className="description-container">{product.description}</div>
           </div>
           <div className="button-cart">
-            <Link href={`/produto/${slug}/${id}`}>
+            <Link href={`/produto/${product.slug}/${product.id}`}>
               <a>
                 <CartIcon />
                 Mais detalhes
