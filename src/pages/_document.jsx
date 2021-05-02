@@ -1,7 +1,7 @@
-import Document, { Head, Main, NextScript, Html } from 'next/document';
+import NextDocument, { Head, Main, NextScript, Html } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-export default class MyDocument extends Document {
+export default class MyDocument extends NextDocument {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 

@@ -28,7 +28,7 @@ const UserNavigation: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link href="/registrar">
             <a>
               <PersonIcon />
             </a>
