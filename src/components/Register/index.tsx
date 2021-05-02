@@ -3,7 +3,7 @@ import React from 'react';
 // Styled component
 import * as S from './styles';
 
-const LoginLayout: React.FC = () => {
+const RegisterLayout: React.FC = () => {
   return (
     <S.Container>
       <div className="blur" />
@@ -16,4 +16,4 @@ const LoginLayout: React.FC = () => {
   );
 };
 
-export default LoginLayout;
+export default RegisterLayout;
