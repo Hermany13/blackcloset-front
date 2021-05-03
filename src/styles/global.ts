@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* NProgress */
   #nprogress .bar {
-    background: #ffd500 !important;
+    background: red !important;
   }
 `;
 
