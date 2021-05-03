@@ -45,3 +45,7 @@ strong {
 button {
   cursor: pointer;
 }
+
+#nprogress .bar {
+  background: linear-gradient(to right, #3d3d3d, white) !important;
+}
