@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-// Ultils js
-import { setSideMenu } from '../../../../utils/js/animations';
+// Utils js
+import { setSideMenu } from '../../../../utils/helpers/AnimationsHelper';
 
 // Components
 import Navigation from '../Navigation';
