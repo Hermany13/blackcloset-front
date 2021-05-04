@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to blackcloset-typescript 👋</h1>
+<h1 align="center">Welcome to blackcloset-front 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -29,18 +29,19 @@ npm run dev
 
 👤 **Hermany Vieira**
 
-* Website: hermanyvieiratj@gmail.com
-* Twitter: [@hermany\_vieira](https://twitter.com/hermany\_vieira)
-* Github: [@hermany13](https://github.com/hermany13)
-* LinkedIn: [@hermany-vieira-oliveira-8690b4161](https://linkedin.com/in/hermany-vieira-oliveira-8690b4161)
+- Website: hermanyvieiratj@gmail.com
+- Twitter: [@hermany_vieira](https://twitter.com/hermany_vieira)
+- Github: [@hermany13](https://github.com/hermany13)
+- LinkedIn: [@hermany-vieira-oliveira-8690b4161](https://linkedin.com/in/hermany-vieira-oliveira-8690b4161)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Hermany13/blackcloset-front/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Hermany13/blackcloset-front/issues).
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
