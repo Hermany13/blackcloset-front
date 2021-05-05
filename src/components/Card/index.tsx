@@ -34,8 +34,6 @@ const Card: React.FC<Product> = (product: Product) => {
     [product.isOffer, product.offerPrice],
   );
 
-  console.log(product.categories);
-
   return (
     <S.Container>
       <Image src={product.image} alt="Roupa" layout="fill" objectFit="cover" />
