@@ -9,11 +9,18 @@ import AboutSection from './AboutSection';
 // Styled components
 import * as S from './styles';
 
-const HomeLayout: React.FC = () => {
+// Interfaces
+import Product from 'models/Product';
+
+interface Props {
+  latestProducts: Product[];
+}
+
+const HomeLayout: React.FC<Props> = ({ latestProducts }) => {
   return (
     <S.Container>
       <Banner />
-      <NewsSection />
+      <NewsSection latestProducts={latestProducts} />
       <OfferSection />
       <AboutSection />
     </S.Container>

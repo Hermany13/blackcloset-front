@@ -1,5 +1,5 @@
 import Category from './Category';
-
+import Request from './Requests';
 export default interface Product {
   id: number;
   name: string;
@@ -14,4 +14,8 @@ export default interface Product {
   created_at: string;
   updated_at: string;
   categories: Category[];
+}
+
+export interface ProductsRequest extends Request {
+  data: Product[];
 }
