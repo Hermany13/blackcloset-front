@@ -36,16 +36,25 @@ const Carousel: React.FC = () => {
     updated_at: '',
     categories: [
       {
-        id: 1,
-        label: 'Calsas',
+        id: 2,
+        name: 'Jeans',
+        slug: 'jeans',
+        created_at: '2021-05-04 22:25:58',
+        updated_at: '2021-05-04 22:25:58',
       },
       {
         id: 3,
-        label: 'Jeans',
+        name: 'Calça',
+        slug: 'calca',
+        created_at: '2021-05-04 22:26:24',
+        updated_at: '2021-05-04 22:26:24',
       },
       {
-        id: 5,
-        label: 'Feminino',
+        id: 6,
+        name: 'Algodão',
+        slug: 'algodao',
+        created_at: '2021-05-04 22:36:00',
+        updated_at: '2021-05-04 22:36:00',
       },
     ],
   };

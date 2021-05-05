@@ -10,6 +10,7 @@ import CartIcon from '../../assets/card/cart-icon.svg';
 
 // Interfaces
 import Product from 'models/Product';
+import Category from 'models/Category';
 
 const Card: React.FC<Product> = (product: Product) => {
   // Refactors
@@ -33,6 +34,8 @@ const Card: React.FC<Product> = (product: Product) => {
     [product.isOffer, product.offerPrice],
   );
 
+  console.log(product.categories);
+
   return (
     <S.Container>
       <Image src={product.image} alt="Roupa" layout="fill" objectFit="cover" />
@@ -53,10 +56,10 @@ const Card: React.FC<Product> = (product: Product) => {
             {product.parcels}x {parcelsPrice} sem juros
           </div>
           <div className="cat-container">
-            {product.categories.map((cat) => {
+            {product.categories.map((cat: Category) => {
               return (
                 <div className="cat" key={cat.id}>
-                  {cat.label}
+                  {cat.name}
                 </div>
               );
             })}

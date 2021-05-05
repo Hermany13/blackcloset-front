@@ -1,4 +1,7 @@
 export default interface Category {
   id: number;
-  label: string;
+  name: string;
+  slug: string;
+  created_at: string;
+  updated_at: string;
 }
