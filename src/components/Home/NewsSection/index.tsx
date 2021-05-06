@@ -21,7 +21,7 @@ const NewsSection: React.FC<Props> = ({ latestProducts }) => {
         <SectionTitle color="#000" title="Novidades" />
         <div className="cards-container">
           {latestProducts.map((product: Product) => {
-            return <Card {...product} />;
+            return <Card {...product} key={product.id} />;
           })}
         </div>
       </div>
