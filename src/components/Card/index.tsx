@@ -12,24 +12,22 @@ import CartIcon from '../../assets/card/cart-icon.svg';
 import Product from 'models/Product';
 import Category from 'models/Category';
 
+// Methods
+const formatToLocalePrice = (price: number): string =>
+  price.toLocaleString('pt-br', { minimumFractionDigits: 2 });
+
+const setParcelsPrice = (product: Product): number => {
+  return product.isOffer === 1
+    ? product.offerPrice / product.parcels
+    : product.price / product.parcels;
+};
+
 const Card: React.FC<Product> = (product: Product) => {
-  // Refactors
   const { offerPriceFormatted, priceFormatted, parcelsPrice } = useMemo(
     () => ({
-      offerPriceFormatted: product.offerPrice.toLocaleString('pt-br', {
-        minimumFractionDigits: 2,
-      }),
-      priceFormatted: product.price.toLocaleString('pt-br', {
-        minimumFractionDigits: 2,
-      }),
-      parcelsPrice:
-        product.isOffer === 1
-          ? (product.offerPrice / product.parcels).toLocaleString('pt-br', {
-              minimumFractionDigits: 2,
-            })
-          : (product.price / product.parcels).toLocaleString('pt-br', {
-              minimumFractionDigits: 2,
-            }),
+      offerPriceFormatted: formatToLocalePrice(product.offerPrice),
+      priceFormatted: formatToLocalePrice(product.price),
+      parcelsPrice: formatToLocalePrice(setParcelsPrice(product)),
     }),
     [product.isOffer, product.offerPrice],
   );
@@ -41,17 +39,15 @@ const Card: React.FC<Product> = (product: Product) => {
         <div className="blur-content">
           <div className="title">{product.name}</div>
           {product.isOffer === 1 ? (
-            <label>R${offerPriceFormatted}</label>
+            <>
+              <label>R${offerPriceFormatted}</label>
+              <span className="is-offer">R${priceFormatted}</span>
+            </>
           ) : (
             <label>R${priceFormatted}</label>
           )}
-          {product.isOffer === 1 ? (
-            <span className="is-offer">R${priceFormatted}</span>
-          ) : (
-            ''
-          )}
           <div className="parcels">
-            {product.parcels}x {parcelsPrice} sem juros
+            {`${product.parcels}x ${parcelsPrice} sem juros`}
           </div>
           <div className="cat-container">
             {product.categories.map((cat: Category) => {
